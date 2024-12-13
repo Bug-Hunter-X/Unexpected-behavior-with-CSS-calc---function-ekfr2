@@ -1,0 +1,24 @@
+/* Correct usage of calc() */
+#container {
+  width: calc(100% - 20px); /* Correct: No extra spaces around operators */
+}
+
+/* Example with unit consistency */
+#element {
+  width: calc(50% - 10px); /* Correct: consistent unit type */
+}
+
+/*Avoid mixing unit types without proper conversion*/
+#anotherElement {
+  width: calc((100% / 2) - 10px); /* Preferred: avoids mixing unit types */
+}
+
+/*Incorrect usage of calc()*/
+/*#wrongContainer {
+  width: calc( 100% - 10px ); /* Incorrect: Extra spaces */
+}*/
+
+/*Incorrect unit type*/
+/*#wrongElement {
+  width: calc(50% - 1em);/* Incorrect: Inconsistent units */
+}*/
